@@ -21,12 +21,10 @@ public class NaveenSQLiteOpenHelper extends SQLiteOpenHelper {
 
 	public NaveenSQLiteOpenHelper(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		// TODO Auto-generated method stub
 		db.execSQL(TABLE_CREATE);
 		Log.i("MEssg : ", "Table has been created");
 
@@ -34,7 +32,6 @@ public class NaveenSQLiteOpenHelper extends SQLiteOpenHelper {
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int Oldversion, int Newversion) {
-		// TODO Auto-generated method stub
 		db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
 		Log.i("MEssg : ", "Table has been Removed and calling to upadate");
 		onCreate(db);
